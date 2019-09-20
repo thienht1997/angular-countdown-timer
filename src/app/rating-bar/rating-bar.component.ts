@@ -10,7 +10,7 @@ interface IRatingUnit {
 })
 export class RatingBarComponent implements OnInit, OnChanges {
   @Input()
-  max = 5;
+  max = 10;
   @Input()
   ratingValue = 5;
   @Input()
@@ -18,6 +18,7 @@ export class RatingBarComponent implements OnInit, OnChanges {
 
   @Output()
   rateChange = new EventEmitter<number>();
+  hide = true;
 
   ratingUnits: Array<IRatingUnit> = [];
 

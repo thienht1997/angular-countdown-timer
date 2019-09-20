@@ -2,8 +2,8 @@
 <div *ngIf="showRatingValue">
   {{ ratingValue }}
 </div>
-
-<div class="rating-bar" (mouseleave)="reset()">
+ 
+<div class="rating-bar" (mouseleave)="reset()"  *ngIf="hide"> 
   <div class="rating-unit"
     [class.active]="item.active"
     *ngFor="let item of ratingUnits; index as i"
@@ -11,3 +11,5 @@
     {{ item.value }}
   </div>
 </div>
+<br>
+<button (click)='hide = !hide'>Toggle</button>
